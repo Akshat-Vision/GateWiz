@@ -46,7 +46,7 @@ module alarm_clock(
                 M_alarm1 <= M_in1;
                 M_alarm0 <= M_in0;
                 S_alarm1 <= 0;
-                S_alarm1 <= 0;
+                S_alarm0 <= 0;
             end
             if(LD_time)
             begin
@@ -84,7 +84,7 @@ module alarm_clock(
                     end
                     else
                     begin
-                        if(M_out0 == 3'b101)
+                        if(M_out0 == 4'b1001)
                         begin
                             M_out1 <= M_out1 + 1;
                             M_out0 <= 0;
